@@ -22,6 +22,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Used for the Dashclock extension -->
+        <service
+            android:name=".DevOpsDashClockExtension"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/dashclock_extension_title"
+            android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA" >
+            <intent-filter>
+                <action android:name="com.google.android.apps.dashclock.Extension" />
+            </intent-filter>
+
+            <meta-data
+                android:name="protocolVersion"
+                android:value="1" />
+            <meta-data
+                android:name="description"
+                android:value="@string/dashclock_extension_description" />
+            <!-- A settings activity is optional 
+            <meta-data
+                android:name="settingsActivity"
+                android:value=".ExampleSettingsActivity" /> -->
+        </service>
     </application>
 
 </manifest>
