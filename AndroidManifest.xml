@@ -22,6 +22,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.asa.devops.appwidget.SingleWidgetConfigActivity" >
+            <!-- <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter> -->
+        </activity>
+
+        <!-- Used for the Widgets -->
+        <receiver android:name=".SingleAppWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/dev_ops_app_widget_provider_info" />
+        </receiver>
 
         <!-- Used for the Dashclock extension -->
         <service
@@ -39,10 +55,12 @@
             <meta-data
                 android:name="description"
                 android:value="@string/dashclock_extension_description" />
-            <!-- A settings activity is optional 
+            <!--
+            A settings activity is optional 
             <meta-data
                 android:name="settingsActivity"
-                android:value=".ExampleSettingsActivity" /> -->
+                android:value=".ExampleSettingsActivity" />
+            -->
         </service>
     </application>
 

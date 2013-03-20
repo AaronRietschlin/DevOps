@@ -1,0 +1,6 @@
+<resources>
+
+    <!-- Margins for the Single Widget AppWidget -->
+    <dimen name="widget_margin">0dp</dimen>
+
+</resources>
