@@ -1,0 +1,1 @@
+A simple Android application that allows easy access to the Development settings. Built to scratch my own itch; the process of going to the Dev settings is too long. Also, I wanted to check out the DashClock API. It's so simple and easy to use.
